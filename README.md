@@ -12,8 +12,8 @@ This document contains the following details:
 - [Description of the Topologu](#description-of-the-topology)
 - [Access Policies](#access-policies)
 - [ELK Configuration](#elk-configuration)
-  - [Beats in Use
-  - Machines Being Monitored](#target-machines--beats)
+  - [Beats in Use](#target-machines--beats)
+  - [Machines Being Monitored](#target-machines--beats)
 - [How to Use the Ansible Build](#using-the-playbook)
 
 
