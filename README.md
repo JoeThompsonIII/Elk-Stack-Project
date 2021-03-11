@@ -22,11 +22,14 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
+Load balancers help ensure environment availability by distributing HTTP traffic between webservers. Jump boxes allow for more easy administration of multiple systems and provide an additional layer between the outside and internal assets.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+By utilizing one virtual machine as a JumpBox the containers in other VMs can be easily modified if needed. One advantage of using a JumpBox is having one origination point for administrative tasks without having to login and go through each VM or container individually. 
+
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system trafic.
+- Filebeat is a lightweight shipper for forwarding and centralizing log data. Installed as an agent on your servers, Filebeat monitors the log files or locations that you specify, collects log events, and forwards them either to Elasticsearch or Logstash for indexing. https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-overview.html#
+
+- Metricbeat is a lightweight shipper that you can install on your servers to periodically collect metrics from the operating system and from services running on the server. Metricbeat takes the metrics and statistics that it collects and ships them to the output that you specify, such as Elasticsearch or Logstash. https://www.elastic.co/guide/en/beats/metricbeat/current/metricbeat-overview.html#
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
