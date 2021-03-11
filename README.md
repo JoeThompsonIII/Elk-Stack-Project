@@ -34,9 +34,10 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
 | Jump Box | Gateway  | 10.0.0.4   | Linux            |
+| Red-Team   | Load Balancer| 52.188.126.200   | Linux            |
 | Web-3x   | DVWA Webserer | 10.0.0.9   | Linux            |
 | Web-4x   | DVWA Webserver| 10.0.0.10  | Linux            |
-| Elk-3    | DVWA Webserver| 10.0.0.10  | Linux            |
+| Elk-3    | Elk Webserver| 10.1.0.4  | Linux            |
 
 ### Access Policies
 
