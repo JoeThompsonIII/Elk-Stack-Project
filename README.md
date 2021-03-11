@@ -36,7 +36,7 @@ The configuration details of each machine may be found below.
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
 | Jump-Box-Provisioner | Gateway      | 10.0.0.4   | Linux            |
-| Red-Team | Load Balancer| 52.188.126.200   | Linux            |
+| Red-Team-LB | Load Balancer| 52.188.126.200   | Linux            |
 | Web-3x   | DVWA Webserer  | 10.0.0.9     | Linux            |
 | Web-4x   | DVWA Webserver | 10.0.0.10  | Linux            |
 | Elk-3    | Elk Webserver  | 10.1.0.4  | Linux            |
@@ -49,15 +49,17 @@ Only the Jump-Box-Provisioner machine can accept connections from the Internet. 
 - My Personal IP address
 
 Machines within the network can only be accessed by SSH.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+- The ELK-Server is only accessible by SSH from the JumpBox and via web access from Personal IP Address.
 
 A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Jump-Box-Provisionerx | No              | Personal IP Address    |
+| Red-Team-LB | Yes |  ALL |
+| Web-3x         | Yes Thru Load Ballancer|  10.0.0.4 |
+| Web-4x         | Yes Thru Load Ballancer |  10.0.0.4 |
+| Elk-3         |  No   | Personal IP Address |
 
 ### Elk Configuration
 
