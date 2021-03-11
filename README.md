@@ -34,9 +34,9 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
 | Jump Box | Gateway  | 10.0.0.4   | Linux            |
-| Web-3x   | Web      | 10.0.0.9   | Docker Container |
-| Web-4x   | Web      | 10.0.0.10  | Docker Container |
-| Elk-3    | ELK      | 10.0.0.10  | Docker Container |
+| Web-3x   | Webserer | 10.0.0.9   | Linux            |
+| Web-4x   | Webserver| 10.0.0.10  | Linux            |
+| Elk-3    | Webserver| 10.0.0.10  | Linux            |
 
 ### Access Policies
 
