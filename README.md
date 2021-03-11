@@ -93,13 +93,9 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Copy the [filebeat-config.yml](Ansible/filebeat-config.yml) file and [metricbeat-config.yml](Ansible/metricbeat-config.yml) file to /etc/ansible/files.
+- Update the hosts file to include "(ip_address of elk server) ansible_python_interpreter=/usr/bin/python3" Within this file, name groups using square brackets (currently contains '[webservers]' and '[elk]') surrounding the group-name and under the group-name, replace private IP's with your own respective IP's. You then use these group-names behind the "hosts:" field in the playbooks to specify which machines to apply the playbook to.
+- Update the config files to include your ELK-server's private IP address. (filebeat-config.yml: lines 1105 & 1805, metricbeat-config.yml: lines 62 & 95)
+- [filebeat-playbook.yml](/Ansible/filebeat-playbook.yml) and [metricbeat-playbook.yml](/Ansible/metricbeat-playbook.yml) are the playbooks for filebeat and metricbeat.  Copy them to /etc/ansible/roles.
+- Run the playbooks, and navigate to http://[ELK-server-public-IP]:5601/app/kibana to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
-
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
