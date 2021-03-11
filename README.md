@@ -4,7 +4,7 @@ The files in this repository were used to configure the network depicted below.
 
 ![Images/Elk_Stack_Diagram.png](Images/Elk_Stack_Diagram.png)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Ansible file may be used to install only certain pieces of it, such as Filebeat.
 
   - _https://github.com/JoeThompsonIII/Elk-Stack-Project/tree/main/Ansible_
 
@@ -21,7 +21,7 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly _____, in addition to restricting _____ to the network.
+Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
 - _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
@@ -34,9 +34,9 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
 | Jump Box | Gateway  | 10.0.0.4   | Linux            |
-| Web-3x   | Webserer | 10.0.0.9   | Linux            |
-| Web-4x   | Webserver| 10.0.0.10  | Linux            |
-| Elk-3    | Webserver| 10.0.0.10  | Linux            |
+| Web-3x   | DVWA Webserer | 10.0.0.9   | Linux            |
+| Web-4x   | DVWA Webserver| 10.0.0.10  | Linux            |
+| Elk-3    | DVWA Webserver| 10.0.0.10  | Linux            |
 
 ### Access Policies
 
