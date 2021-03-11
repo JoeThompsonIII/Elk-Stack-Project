@@ -94,8 +94,11 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
 SSH into the control node and follow the steps below:
 - Copy the [filebeat-config.yml](Ansible/filebeat-config.yml) file and [metricbeat-config.yml](Ansible/metricbeat-config.yml) file to /etc/ansible/files.
-- Update the hosts file to include "(ip_address of elk server) ansible_python_interpreter=/usr/bin/python3" Within this file, name groups using square brackets (currently contains '[webservers]' and '[elk]') surrounding the group-name and under the group-name, replace private IP's with your own respective IP's. You then use these group-names behind the "hosts:" field in the playbooks to specify which machines to apply the playbook to.
+- Update the hosts file to include "(ip_address of elk server) ansible_python_interpreter=/usr/bin/python3". Within this file, name groups using square brackets (currently contains '[webservers]' and '[elk]') surrounding the group-name and under the group-name, replace private IP's with your own respective IP's. You then use these group-names behind the "hosts:" field in the playbooks to specify which machines to apply the playbook.
 - Update the config files to include your ELK-server's private IP address. (filebeat-config.yml: lines 1105 & 1805, metricbeat-config.yml: lines 62 & 95)
 - [filebeat-playbook.yml](/Ansible/filebeat-playbook.yml) and [metricbeat-playbook.yml](/Ansible/metricbeat-playbook.yml) are the playbooks for filebeat and metricbeat.  Copy them to /etc/ansible/roles.
-- Run the playbooks, and navigate to http://[ELK-server-public-IP]:5601/app/kibana to check that the installation worked as expected.
+- Run the playbooks
+  - ansible-playbook /etc/ansible/roles/filebeat-playbook.yml
+  - ansible-playbook /etc/ansible/roles/metricbeat-playbook.yml  
+- Navigate to http://[ELK-server-public-IP]:5601/app/kibana to check that the installation worked as expected.
 
