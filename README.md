@@ -32,24 +32,23 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 - Metricbeat is a lightweight shipper that you can install on your servers to periodically collect metrics from the operating system and from services running on the server. Metricbeat takes the metrics and statistics that it collects and ships them to the output that you specify, such as Elasticsearch or Logstash. https://www.elastic.co/guide/en/beats/metricbeat/current/metricbeat-overview.html#
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.4   | Linux            |
-| Red-Team   | Load Balancer| 52.188.126.200   | Linux            |
-| Web-3x   | DVWA Webserer | 10.0.0.9   | Linux            |
-| Web-4x   | DVWA Webserver| 10.0.0.10  | Linux            |
-| Elk-3    | Elk Webserver| 10.1.0.4  | Linux            |
+| Jump-Box-Provisioner | Gateway      | 10.0.0.4   | Linux            |
+| Red-Team | Load Balancer| 52.188.126.200   | Linux            |
+| Web-3x   | DVWA Webserer  | 10.0.0.9     | Linux            |
+| Web-4x   | DVWA Webserver | 10.0.0.10  | Linux            |
+| Elk-3    | Elk Webserver  | 10.1.0.4  | Linux            |
 
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the Jump-Box-Provisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+- My Personal IP address
 
-Machines within the network can only be accessed by _____.
+Machines within the network can only be accessed by SSH.
 - _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
 
 A summary of the access policies in place can be found in the table below.
