@@ -9,7 +9,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
   - _https://github.com/JoeThompsonIII/Elk-Stack-Project/tree/main/Ansible_
 
 This document contains the following details:
-- [Description of the Topologu](#description-of-the-topology)
+- [Description of the Topology](#description-of-the-topology)
 - [Access Policies](#access-policies)
 - [ELK Configuration](#elk-configuration)
   - [Beats in Use](#target-machines--beats)
